@@ -42,8 +42,11 @@ const App = () => {
     const filmFavorites = JSON.parse(
       localStorage.getItem('your-favorites')
     );
-
-    setFavoriteFilms(filmFavorites);
+    
+    if(filmFavorites) {
+      setFavoriteFilms(filmFavorites);
+    }
+    
   }, []);
 
 
@@ -65,6 +68,7 @@ const App = () => {
     saveToLocalStorage(newFavoriteList);//removed
   };
 
+  
   return (
     <div className="App container-fluid film-css">
       <div className="row d-flex align-items-center mb-4">
@@ -79,7 +83,7 @@ const App = () => {
           favorites = {AddFavorites}
         />
       </div>
-      
+
       <div className="row d-flex align-items-center mt-4 mb-4">
         <FilmListHeading heading="Your Favorites"/>
       </div>
@@ -87,7 +91,7 @@ const App = () => {
       <div className="row">
         <FilmList 
           films= {favoriteFilms} 
-          favoritesChosen={removeFavoriteFilm} 
+          favoritesChosen={removeFavoriteFilm}
           favorites = {RemoveFavorites}
         />
       </div>

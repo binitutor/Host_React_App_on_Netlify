@@ -1,5 +1,5 @@
 {
-  "name": "bini-movies",
+  "name": "clear",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,5 +35,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Learn React.js from scratch on YouTube and use one of the most popular frontend libraries to build amazing web apps!",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git add ."
+  },
+  "author": "",
+  "license": "ISC"
 }
